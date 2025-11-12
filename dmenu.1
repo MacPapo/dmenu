@@ -3,7 +3,7 @@
 dmenu \- dynamic menu
 .SH SYNOPSIS
 .B dmenu
-.RB [ \-bfiv ]
+.RB [ \-bFfiv ]
 .RB [ \-l
 .IR lines ]
 .RB [ \-m
@@ -30,6 +30,8 @@ dmenu \- dynamic menu
 .IR color ]
 .RB [ \-w
 .IR windowid ]
+.RB [ \-H
+.IR histfile ]
 .P
 .BR dmenu_run " ..."
 .SH DESCRIPTION
@@ -47,6 +49,9 @@ which lists programs in the user's $PATH and runs the result in their $SHELL.
 .TP
 .B \-b
 dmenu appears at the bottom of the screen.
+.TP
+.B \-F
+disables fuzzy matching.
 .TP
 .B \-f
 dmenu grabs the keyboard before reading stdin if not reading from a tty. This
@@ -100,6 +105,9 @@ prints version information to stdout, then exits.
 .TP
 .BI \-w " windowid"
 embed into windowid.
+.TP
+.BI \-H " histfile"
+save input in histfile and use it for history navigation.
 .SH USAGE
 dmenu is completely controlled by the keyboard.  Items are selected using the
 arrow keys, page up, page down, home, and end.
